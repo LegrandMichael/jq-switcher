@@ -5,6 +5,13 @@ var species = {
 };
 
 function main(){
+
+	$(".button").click(function() { // Step 1
+		var attr = $(this).data("animal"); // Step 2
+		var path = species[attr]; // Step 3
+		$("#holder").html("<img src='img/"+ path +"' alt='' />");
+	});
+
 	/* 
 	tout votre code doit se trouver dans cette fonction,
 	vous pouvez biensur créer d'autres fonctions si nécessaire
